@@ -1,0 +1,19 @@
+{
+  "name": "wait-action",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.0",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.9",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "rollup": "^4.62.0",
+    "typescript": "^5.0.0"
+  }
+}

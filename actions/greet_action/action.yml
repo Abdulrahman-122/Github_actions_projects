@@ -1,0 +1,11 @@
+name: Make_Greeting
+description: test_js_action
+inputs:
+  name:
+    description: Greet Name
+    required: true
+
+
+runs:
+  using: node24
+  main: dist/index.js
