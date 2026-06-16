@@ -1,0 +1,10 @@
+name: Test_Error
+on:
+  workflow_dispatch:
+    
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "::error:: Database connection failed!!!"
