@@ -12,7 +12,7 @@ jobs:
           echo "image_tag=v2.5.5">>$GITHUB_OUTPUT
       - name: Build image
         run: |
-          docker build -t myapp:${{ steps.foo.outputs.image-version }} .
+          docker build -t  .
       - name: Varify image
         run: |
           echo "Everything work well"
