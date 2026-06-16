@@ -7,5 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-         echo  " ::error:: Database connection failed!!!"
-         echo "::error:: Database connection failed!!!"
+         echo " ::warning:: Low Disk space!!!"

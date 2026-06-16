@@ -1,0 +1,14 @@
+name: Test_Error
+on:
+  workflow_dispatch:
+    
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+         echo "::group::Install Dependencies!!!"
+         docker build .
+         docker ps -a
+         docker exec -it container_name  bash
+         echo "::endgroup::"
