@@ -8,7 +8,6 @@ jobs:
     steps:
       - run: |
          echo "::group::Install Dependencies!!!"
-         docker build .
-         docker ps -a
-         docker exec -it container_name  bash
+         echo "Installing package A"
+         echo "Installing package B"
          echo "::endgroup::"
