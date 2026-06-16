@@ -1,0 +1,25 @@
+# by default debug mode + any info related to it will be hidden
+# unless you add environemt variable called; ACTIONS_STEP_DEBUG=True
+
+
+name: Test_Debug_mode
+on:
+  workflow_dispatch:
+    
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Show current Directory
+        run: |
+          echo "::debug:: current dir is $(pwd)"
+          echo "then ..."
+          echo "::debug:: runner user is $(whoami)"
+          echo "then..."
+          echo "::debug:: Files in directory : $(ls -la )"
+      - name: Prove execution continues normally
+        run: |
+          echo "Workflow is still running..."
+          echo "This step is not affected by debug logs"
