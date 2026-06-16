@@ -1,20 +1,22 @@
 name: Test
+
 on:
   workflow_dispatch:
 
 jobs:
   Test_yml:
     runs-on: ubuntu-latest
-    steps:  
-      - name: Generate_tag
-        id : foo
+
+    steps:
+      - name: Generate tag
+        id: foo
         run: |
-          echo "image_tag=v2.5.5">>$GITHUB_OUTPUT
+          echo "image_tag=v2.5.5" >> $GITHUB_OUTPUT
+
       - name: Build image
         run: |
-          docker build -t  .
-      - name: Varify image
-        run: |
-          echo "Everything work well"
+          docker build -t myapp:${{ steps.foo.outputs.image_tag }} .
 
-        
+      - name: Verify image
+        run: |
+          echo "Everything works well"
