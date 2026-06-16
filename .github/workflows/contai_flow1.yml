@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v5
       - name: Run python container action
         id: greet
-        uses: ../container_action
+        uses: ./container_action
         with:
           who_to_greet: Abdulrahman
       - name: Print output
