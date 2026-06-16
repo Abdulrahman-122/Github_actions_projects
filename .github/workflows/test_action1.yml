@@ -1,0 +1,15 @@
+name: test Javascript action
+on:
+  workflow_dispatch:
+jobs:
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+
+      - id: wait
+        uses: ./actions/wait_action
+        with: 
+          milliseconds: 1000
+      - run: echo "${{ steps.wait.outputs.time }}"

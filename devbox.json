@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "nodejs@24"
+  ],
+
+  "shell": {
+    "init_hook": [
+      "npm install"
+    ]
+  }
+}
