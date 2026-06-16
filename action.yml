@@ -1,0 +1,16 @@
+name: Test_Container_using_python
+description: Check whether the container action work or not
+inputs:
+  who_to_greet:
+    description:  Greet someone by its name
+    required: true
+outputs:
+  Greeting:
+    description: the generated greeting message
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{inputs.who_to_greet}}
+
+    

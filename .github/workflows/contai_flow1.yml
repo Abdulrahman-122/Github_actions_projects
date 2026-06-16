@@ -1,0 +1,16 @@
+name: Test_Container_action
+on:
+  workflow_dispatch:
+jobs:
+  Test:
+    runs-on: ubuntu-latest;
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+      - name: Run python container action
+        id: greet
+        uses: ../container_action
+        with:
+          who_to_greet: Abdulrahman
+      - name: Print output
+        run: echo ${{steps.greet.outputs.greeting}}
