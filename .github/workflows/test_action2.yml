@@ -11,4 +11,4 @@ jobs:
         uses: ./actions/greet_action
         with:
           name: Abdulrahman
-      - run: echo "${{steps.greet.outputs.message}}
+      - run: echo "${{steps.greet.outputs.message}}"
